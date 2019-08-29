@@ -1,3 +1,3 @@
 function revealMessage() {
-  document.getElementByID("hiddenMessage").style.display = "block";
+  document.getElementById("hiddenMessage").style.display = "block";
 }
