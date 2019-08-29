@@ -1,3 +1,3 @@
 function revealMessage() {
-  document.getElementById("hiddenMessage").style.display = 'block';
+  document.getElementById("mainHeader").textContent = "Jokes bro, you're amazing";
 }
