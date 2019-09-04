@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
 
+    <!-- General meta data -->
     <meta charset="utf-8">
     <title>Bob Wu - About me</title>
     <meta name="author" content="Bob Wu">
     <meta name="description" content="This website's main objective was to create an online resume to highlight Bob's skills and work experience.
     This website is also the product of a little project Bob started to learn HTML, CSS and JavaScript">
+
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" tyle="text/styles" href="styles/stylesheet.css">
 
     <!-- Meta data to be shown via Facebook -->
     <meta property="og:title" content="Bob Wu - About me">
@@ -15,8 +19,15 @@
     This website is also the product of a little project Bob started to learn HTML, CSS and JavaScript">
     <meta property="og:type" content="website">
 
+  </head>
+
   <body>
     <img src="https://media.licdn.com/dms/image/C5103AQHkxwwDZjhizw/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=kDkyhMx5Z--Ft8zipwKWYGDxPA3uhZa4yvFpugj5KHQ">
-    <p>Test text: If this is visible, the code is working"</p>
+    <p id="testText">Test text: If this is visible, the code is working</p>
+    <button type="button" onclick="test()">Click here</button>
+
+    <!-- Adding the script at the bottom -->
+    <script src="scripts/script.js"></script>
+
   </body>
 </html>
