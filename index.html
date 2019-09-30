@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bob Wu - About me</title>
     <meta name="author" content="Bob Wu">
+    <link rel="shortcut icon" type="image/png" href="images/b-logo.png">
     <meta name="description" content="This website's main objective was to create an online resume to highlight Bob's skills and work experience.
     This website is also the product of a little project Bob started to learn HTML, CSS and JavaScript">
 
     <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--<link rel="stylesheet" tyle="text/styles" href="styles/stylesheet.css"> -->
+    <link rel="stylesheet" style="text/css" href="styles/stylesheet.css"> <!-- This also applies a custom stylesheet on top of the Bootstrap stylesheet -->
 
     <!-- Meta data to be shown via Facebook -->
     <meta property="og:title" content="Bob Wu - About me">
@@ -24,52 +25,94 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark navbar-expand-md" style="background-color:#454545">
-      <a class="navbar-brand" href="#"><img src="images/b-logo.png"></img> Bob Wu</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls-"navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top" style="background-color:#454545">
+      <a class="navbar-brand" href="#top"><img src="images/b-logo.png"></img> Bob Wu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls-".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse" id="navbarMain">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item active" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#top" >Home</a>
           </li>
-          <li class="nav-item">
-
-            <!-- This needs to be changed to ensure that it's linking correctly -->
-
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#aboutMe">About Me</a>
           </li>
-          <li class="nav-item">
-
-            <!-- This needs to be changed to ensure that it's linking correctly -->
-
-            <a class="nav-link" href="#">Work Experience</a>
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#workExperience">Work Experience</a>
+          </li>
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#keySkills">Key Skills</a>
+          </li>
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" href="#contactMe">Contact Me</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <main>
-      <section id="aboutMe">
-        <div class="container">
-          <img src="https://media.licdn.com/dms/image/C5103AQHkxwwDZjhizw/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=kDkyhMx5Z--Ft8zipwKWYGDxPA3uhZa4yvFpugj5KHQ">
-          <p id="testText">Test text: If this is visible, the code is working</p>
-          <button type="button" onclick="test()">Click here</button>
-        </div>
-      </section>
+    <div class="main">
+      <a class="anchor" id="mainPage"></a>
 
-      <!-- Adding the script at the bottom -->
-      <!--<script src="scripts/script.js"></script> -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </main>
+      <div class="container-fluid" id="aboutMe-container">
+        <img src="https://media.licdn.com/dms/image/C5103AQHkxwwDZjhizw/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=kDkyhMx5Z--Ft8zipwKWYGDxPA3uhZa4yvFpugj5KHQ">
+        <p id="testText">Test text: If this is visible, the code is working</p>
+        <button type="button" onclick="test()">Click here</button>
+      </div>
+      <a class="anchor" id="aboutMe"></a>
+
+      <div class="container-fluid" id="workExperience-container">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg">Fake Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <br>
+      </div>
+      <a class="anchor" id="workExperience"></a>
+
+      <div class="container-fluid" id="keySkills-container">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg">Fake Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <br>
+      </div>
+      <a class="anchor" id="keySkills"></a>
+
+      <div class="container-fluid" id="contactMe-container">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg">Fake Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <br>
+      </div>
+      <a class="anchor" id="contactMe"></a>
+
+      <footer class="text-white" style="background-color:#454545">
+        <div class="container text-center">
+          <p>© Bob Wu 2019.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Adding the script at the bottom -->
+    <!--<script src="scripts/script.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+    <!--
     <footer class="text-white fixed-bottom" style="background-color:#454545">
       <div class="container text-center">
         <p>© Bob Wu 2019.</p>
       </div>
     </footer>
+  -->
 
   </body>
 </html>
